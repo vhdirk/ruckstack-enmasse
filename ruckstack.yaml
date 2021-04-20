@@ -1,0 +1,147 @@
+id: ruckstack-enmasse
+name: Ruckstack Enmasse example
+version: 0.1.0
+#managerFilename: other-filename # Name of the "manager" file in SERVER_HOME/bin. Default's to the project "id"
+
+manifestServices:
+  # enmasse
+  - id: 010-010-addresses.crd
+    manifest: enmasse/install/bundles/enmasse/010-010-addresses.crd.yaml
+  - id: 010-010-addressplans.crd
+    manifest: enmasse/install/bundles/enmasse/010-010-addressplans.crd.yaml
+  - id: 010-010-addressspaceplans.crd
+    manifest: enmasse/install/bundles/enmasse/010-010-addressspaceplans.crd.yaml
+  - id: 010-010-addressspaceschemas.crd
+    manifest: enmasse/install/bundles/enmasse/010-010-addressspaceschemas.crd.yaml
+  - id: 010-010-addressspaces.crd
+    manifest: enmasse/install/bundles/enmasse/010-010-addressspaces.crd.yaml
+  - id: 010-010-authenticationservices.crd
+    manifest: enmasse/install/bundles/enmasse/010-010-authenticationservices.crd.yaml
+  - id: 010-010-brokeredinfraconfigs.crd
+    manifest: enmasse/install/bundles/enmasse/010-010-brokeredinfraconfigs.crd.yaml
+  - id: 010-010-consoleservices.crd
+    manifest: enmasse/install/bundles/enmasse/010-010-consoleservices.crd.yaml
+  - id: 010-010-messagingusers.crd
+    manifest: enmasse/install/bundles/enmasse/010-010-messagingusers.crd.yaml
+  - id: 010-010-standardinfraconfigs.crd
+    manifest: enmasse/install/bundles/enmasse/010-010-standardinfraconfigs.crd.yaml
+  - id: 010-ServiceAccount-address-space-admin
+    manifest: enmasse/install/bundles/enmasse/010-ServiceAccount-address-space-admin.yaml
+  - id: 010-ServiceAccount-address-space-controller
+    manifest: enmasse/install/bundles/enmasse/010-ServiceAccount-address-space-controller.yaml
+  - id: 010-ServiceAccount-console-server
+    manifest: enmasse/install/bundles/enmasse/010-ServiceAccount-console-server.yaml
+  - id: 010-ServiceAccount-enmasse-operator
+    manifest: enmasse/install/bundles/enmasse/010-ServiceAccount-enmasse-operator.yaml
+  - id: 010-ServiceAccount-standard-authservice
+    manifest: enmasse/install/bundles/enmasse/010-ServiceAccount-standard-authservice.yaml
+  - id: 020-ClusterRole-address-space-admin
+    manifest: enmasse/install/bundles/enmasse/020-ClusterRole-address-space-admin.yaml
+  - id: 020-ClusterRole-address-space-controller
+    manifest: enmasse/install/bundles/enmasse/020-ClusterRole-address-space-controller.yaml
+  - id: 020-ClusterRole-console-server
+    manifest: enmasse/install/bundles/enmasse/020-ClusterRole-console-server.yaml
+  - id: 020-ClusterRole-enmasse-operator
+    manifest: enmasse/install/bundles/enmasse/020-ClusterRole-enmasse-operator.yaml
+  - id: 020-ClusterRole-standard-authservice
+    manifest: enmasse/install/bundles/enmasse/020-ClusterRole-standard-authservice.yaml
+  - id: 020-Role-address-space-admin
+    manifest: enmasse/install/bundles/enmasse/020-Role-address-space-admin.yaml
+  - id: 020-Role-address-space-controller
+    manifest: enmasse/install/bundles/enmasse/020-Role-address-space-controller.yaml
+  - id: 020-Role-console-server
+    manifest: enmasse/install/bundles/enmasse/020-Role-console-server.yaml
+  - id: 020-Role-enmasse-operator
+    manifest: enmasse/install/bundles/enmasse/020-Role-enmasse-operator.yaml
+  - id: 030-ClusterRoleBinding-address-space-admin
+    manifest: enmasse/install/bundles/enmasse/030-ClusterRoleBinding-address-space-admin.yaml
+  - id: 030-ClusterRoleBinding-address-space-controller
+    manifest: enmasse/install/bundles/enmasse/030-ClusterRoleBinding-address-space-controller.yaml
+  - id: 030-ClusterRoleBinding-console-server
+    manifest: enmasse/install/bundles/enmasse/030-ClusterRoleBinding-console-server.yaml
+  - id: 030-ClusterRoleBinding-enmasse-operator
+    manifest: enmasse/install/bundles/enmasse/030-ClusterRoleBinding-enmasse-operator.yaml
+  - id: 030-ClusterRoleBinding-standard-authservice
+    manifest: enmasse/install/bundles/enmasse/030-ClusterRoleBinding-standard-authservice.yaml
+  - id: 030-RoleBinding-address-space-admin
+    manifest: enmasse/install/bundles/enmasse/030-RoleBinding-address-space-admin.yaml
+  - id: 030-RoleBinding-address-space-controller
+    manifest: enmasse/install/bundles/enmasse/030-RoleBinding-address-space-controller.yaml
+  - id: 030-RoleBinding-console-server
+    manifest: enmasse/install/bundles/enmasse/030-RoleBinding-console-server.yaml
+  - id: 030-RoleBinding-enmasse-operator
+    manifest: enmasse/install/bundles/enmasse/030-RoleBinding-enmasse-operator.yaml
+  - id: 050-Deployment-enmasse-operator
+    manifest: enmasse/install/bundles/enmasse/050-Deployment-enmasse-operator.yaml
+  - id: 020-AddressPlan-brokered-deadletter
+    manifest: enmasse/install/components/example-plans/020-AddressPlan-brokered-deadletter.yaml
+  - id: 020-AddressPlan-brokered-queue
+    manifest: enmasse/install/components/example-plans/020-AddressPlan-brokered-queue.yaml
+  - id: 020-AddressPlan-brokered-topic
+    manifest: enmasse/install/components/example-plans/020-AddressPlan-brokered-topic.yaml
+  - id: 020-AddressPlan-standard-deadletter
+    manifest: enmasse/install/components/example-plans/020-AddressPlan-standard-deadletter.yaml
+  - id: 020-AddressPlan-standard-large-anycast
+    manifest: enmasse/install/components/example-plans/020-AddressPlan-standard-large-anycast.yaml
+  - id: 020-AddressPlan-standard-large-multicast
+    manifest: enmasse/install/components/example-plans/020-AddressPlan-standard-large-multicast.yaml
+  - id: 020-AddressPlan-standard-large-partitioned-queue
+    manifest: enmasse/install/components/example-plans/020-AddressPlan-standard-large-partitioned-queue.yaml
+  - id: 020-AddressPlan-standard-large-queue
+    manifest: enmasse/install/components/example-plans/020-AddressPlan-standard-large-queue.yaml
+  - id: 020-AddressPlan-standard-large-subscription
+    manifest: enmasse/install/components/example-plans/020-AddressPlan-standard-large-subscription.yaml
+  - id: 020-AddressPlan-standard-large-topic
+    manifest: enmasse/install/components/example-plans/020-AddressPlan-standard-large-topic.yaml
+  - id: 020-AddressPlan-standard-medium-anycast
+    manifest: enmasse/install/components/example-plans/020-AddressPlan-standard-medium-anycast.yaml
+  - id: 020-AddressPlan-standard-medium-multicast
+    manifest: enmasse/install/components/example-plans/020-AddressPlan-standard-medium-multicast.yaml
+  - id: 020-AddressPlan-standard-medium-partitioned-queue
+    manifest: enmasse/install/components/example-plans/020-AddressPlan-standard-medium-partitioned-queue.yaml
+  - id: 020-AddressPlan-standard-medium-queue
+    manifest: enmasse/install/components/example-plans/020-AddressPlan-standard-medium-queue.yaml
+  - id: 020-AddressPlan-standard-medium-subscription
+    manifest: enmasse/install/components/example-plans/020-AddressPlan-standard-medium-subscription.yaml
+  - id: 020-AddressPlan-standard-medium-topic
+    manifest: enmasse/install/components/example-plans/020-AddressPlan-standard-medium-topic.yaml
+  - id: 020-AddressPlan-standard-small-anycast
+    manifest: enmasse/install/components/example-plans/020-AddressPlan-standard-small-anycast.yaml
+  - id: 020-AddressPlan-standard-small-multicast
+    manifest: enmasse/install/components/example-plans/020-AddressPlan-standard-small-multicast.yaml
+  - id: 020-AddressPlan-standard-small-partitioned-queue
+    manifest: enmasse/install/components/example-plans/020-AddressPlan-standard-small-partitioned-queue.yaml
+  - id: 020-AddressPlan-standard-small-queue
+    manifest: enmasse/install/components/example-plans/020-AddressPlan-standard-small-queue.yaml
+  - id: 020-AddressPlan-standard-small-subscription
+    manifest: enmasse/install/components/example-plans/020-AddressPlan-standard-small-subscription.yaml
+  - id: 020-AddressPlan-standard-small-topic
+    manifest: enmasse/install/components/example-plans/020-AddressPlan-standard-small-topic.yaml
+  - id: 020-AddressPlan-standard-xlarge-queue
+    manifest: enmasse/install/components/example-plans/020-AddressPlan-standard-xlarge-queue.yaml
+  - id: 020-AddressPlan-standard-xlarge-topic
+    manifest: enmasse/install/components/example-plans/020-AddressPlan-standard-xlarge-topic.yaml
+  - id: 020-AddressSpacePlan-brokered-single-broker
+    manifest: enmasse/install/components/example-plans/020-AddressSpacePlan-brokered-single-broker.yaml
+  - id: 020-AddressSpacePlan-standard-medium
+    manifest: enmasse/install/components/example-plans/020-AddressSpacePlan-standard-medium.yaml
+  - id: 020-AddressSpacePlan-standard-small
+    manifest: enmasse/install/components/example-plans/020-AddressSpacePlan-standard-small.yaml
+  - id: 020-AddressSpacePlan-standard-unlimited
+    manifest: enmasse/install/components/example-plans/020-AddressSpacePlan-standard-unlimited.yaml
+  - id: 020-BrokeredInfraConfig-default
+    manifest: enmasse/install/components/example-plans/020-BrokeredInfraConfig-default.yaml
+  - id: 020-StandardInfraConfig-default-minimal
+    manifest: enmasse/install/components/example-plans/020-StandardInfraConfig-default-minimal.yaml
+  - id: 020-StandardInfraConfig-default
+    manifest: enmasse/install/components/example-plans/020-StandardInfraConfig-default.yaml
+  - id: 020-ClusterRole-schema
+    manifest: enmasse/install/components/example-roles/020-ClusterRole-schema.yaml
+  - id: 020-ClusterRole-service-admin
+    manifest: enmasse/install/components/example-roles/020-ClusterRole-service-admin.yaml
+  - id: 020-ClusterRole-tenant-edit
+    manifest: enmasse/install/components/example-roles/020-ClusterRole-tenant-edit.yaml
+  - id: 020-ClusterRole-tenant-view
+    manifest: enmasse/install/components/example-roles/020-ClusterRole-tenant-view.yaml
+  - id: 030-ClusterRoleBinding-schema
+    manifest: enmasse/install/components/example-roles/030-ClusterRoleBinding-schema.yaml
